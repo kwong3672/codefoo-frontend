@@ -21,8 +21,8 @@ var getContent = function (category, startIdx, count) {
       if (startIdx === 0) {
         currentIndex = 0;
         parseData(response.data, 0, 10);
+        toggleArticleType();
       }
-
       preloadData = preloadData.concat(response.data);
       console.log(preloadData);
 
