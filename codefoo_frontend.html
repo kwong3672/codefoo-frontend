@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodeFoo Frontend</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" type="text/css" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="./codefoo_frontend.css">
+
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="header row">
+      <div class="categories category_videos col-xs-6" onclick="getContent('videos', 0, 20)">VIDEOS</div>
+      <div class="categories category_articles col-xs-6" onclick="getContent('articles', 0, 20)">ARTICLES</div>
+    </div>
+    
+    <!-- content will be added inside content div -->
+    <div class="content videos"></div>
+
+    <div class="row">
+      <div class="col-xs-6" onclick="parseData(preloadData, currentIndex)">
+        SEE MORE VIDEOS...
+      </div>
+      <div class="col-xs-6">
+        SEARCH: <input width="300px" onkeypress="search(event, this.value)">
+      </div>
+    </div>
+
+  </div>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+  <!-- <script type="text/javascript" src="./jquery-3.1.1.min.js"></script> -->
+  <!-- <script type="text/javascript" src="./lodash/lodash.min.js"></script> -->
+  <script type="text/javascript" src="./codefoo_frontend.js"></script>
+
+</body>
+</html>
