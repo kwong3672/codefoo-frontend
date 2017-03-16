@@ -34,6 +34,11 @@ var displayContent = function (index, title, description, duration, srcSet, url)
   $('.content').append(appendContent);
   $('.content').append(appendImage);
 
-
   currentIndex++;
+};
+
+var displayNoMatches = function () {
+  var noMatches = '<div class="col-xs-12 no-match">No Matches Found</div>';
+  $('.content').empty();
+  $('.content').append(noMatches);
 };
