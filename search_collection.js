@@ -4,6 +4,7 @@ var search = function (event, searchString) {
   var matchedSearch = [];
   if (event.keyCode === 13) {
     // create new regex expression
+    // debugger;
     searchString = new RegExp('\\b' + searchString.replace(/\s/g, '\\W*'), 'i');
     // clears search textbox
     $('input').val('');
@@ -29,8 +30,12 @@ var search = function (event, searchString) {
       }
     });
 
-    console.log('matchedSearch is :', matchedSearch);
-    parseData(matchedSearch, 0, matchedSearch.length);
+    if (!matchedSearch.length) {
+      displayNoMatches();
+    } else {
+      parseData(matchedSearch, 0, matchedSearch.length);
+    }
+    $('.display-more').text('');
   }
 };
 
