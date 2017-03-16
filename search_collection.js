@@ -38,7 +38,3 @@ var search = function (event, searchString) {
     $('.display-more').text('');
   }
 };
-
-// var testString = function (regex, string) {
-//   return regex.test(string);
-// };
