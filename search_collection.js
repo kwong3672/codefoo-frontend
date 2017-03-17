@@ -30,11 +30,14 @@ var search = function (event, searchString) {
       }
     });
 
+    // if no search matches display no matches message
     if (!matchedSearch.length) {
       displayNoMatches();
+    // display all match results
     } else {
       parseData(matchedSearch, 0, matchedSearch.length);
     }
+    // clear view more article/video text
     $('.display-more').text('');
   }
 };
