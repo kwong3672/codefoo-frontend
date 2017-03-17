@@ -1,3 +1,4 @@
+// changes color of active category heading to red and changes load more text
 var toggleArticleType = function () {
   var active = {
     'background-color': '#B22222',

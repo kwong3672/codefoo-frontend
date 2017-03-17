@@ -3,4 +3,4 @@ var currentCategory = '';
 var currentIndex = 0;
 var preloadData = [];
 
-getContent('videos', 0, 20);
+getContent();

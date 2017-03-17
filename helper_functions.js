@@ -1,18 +1,11 @@
-var toggleImage = function (event, data) {
-  var display = $('#' + data)[0].style.display;
-  $('.picture').hide();
-
-  if (display !== 'block') {
-    $('#' + data).show();
-  }
-};
-
+// create API url and query string
 var getAPIQuery = function (startIdx, count, category) {
   var url = 'http://ign-apis.herokuapp.com/';
   var query = url + category + '?startIndex=' + startIdx + '&count=' + count;
   return query;
 };
 
+// convert time in secs to hh:mm:ss format
 var formatTime = function(duration) {
   // if no duration provided return empty string
   if (!duration) {
@@ -41,12 +34,10 @@ var formatTime = function(duration) {
   return hrs + mins + ':' + secs;
 };
 
+// parse API data to be displayed
 var parseData = function (videosOrArticles, start, end) {
+  // if no end value given parse next 10 videos or articles
   end = end || start + 10;
-  // need to add more code here for when to add more content vs just empting content out
-  if (start === 0) {
-    $('.content').empty();
-  }
 
   for (var index = start; index < end; index++) {
     var data = videosOrArticles[index];
@@ -59,4 +50,14 @@ var parseData = function (videosOrArticles, start, end) {
 
     displayContent(index + 1, title, description, duration, srcSet, url);
   }  
+};
+
+// show/hide image when content clicked
+var toggleImage = function (event, data) {
+  var display = $('#' + data)[0].style.display;
+  $('.picture').hide();
+
+  if (display !== 'block') {
+    $('#' + data).show();
+  }
 };
