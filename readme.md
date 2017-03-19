@@ -3,7 +3,7 @@
 Build a web page that displays the content and matches this design of the example given at http://www.ign.com/code-foo/2017/ as closely as possible. The page should be responsive, and should support common resolutions ranging from mobile to desktop.
 
 ## Instructions:
-Clone repository.
+Clone repository.<br />
 Open 'codefoo_frontend.html' in web browser.
 
 ## Additional Features
